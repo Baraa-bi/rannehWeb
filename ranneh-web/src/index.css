@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'ZainArabic';
+  src:url('./assets/fonts/QTZainTextRegular.otf')
+}
+@font-face {
+  font-family: 'ZainEnglish';
+  src:url('./assets/fonts/Avenir.ttc')
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width:100%;
+  background-color:#F1F1F1;
+}
+
+.fade-leave{
+  opacity:1;
+}
+
+.fade-leave-active{
+  opacity:0;
+  transition: .2s  linear;
+}
+
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
