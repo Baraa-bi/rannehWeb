@@ -55,7 +55,7 @@ class Header extends Component {
                         </Paper>
                     </Grid>
                 </Grid>
-                <Divider style={{ backgroundColor: '#F2F2F2', marginBottom: 15 }} />
+                <Divider style={{ backgroundColor: '#BDBDBD', marginBottom: 15 }} />
             </div>
         );
     }
