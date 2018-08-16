@@ -39,6 +39,7 @@ export const tonesModel = tone => {
         toneLanguage: checkLanguage(tone.language),
         toneBadgeEn: handleJson(() => tone.badge.en, ''),
         toneBadgeAr: handleJson(() => tone.badge.ar, ''),
+        isSubscribed:tone.is_subscribed,
         children: handleJson(() => _.map(tone.children.data, subTone => tonesModel(subTone)), []),
         genres: handleJson(() => tone.genres.data),
         toneImage: handleJson(() => tone.media[1].url, authorImage),

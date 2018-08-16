@@ -12,3 +12,5 @@ export * from './getSingleTone';
 export * from './getToneList';
 
 export * from './SubscribeTone';
+
+export * from './unsubscribeTone';

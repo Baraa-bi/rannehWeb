@@ -14,8 +14,16 @@ export default {
         en:'ACTIVATE NOW FOR FREE',
         ar:'تفعيل الآن مجاناً'
     },
+    deactivate:{
+        en:'DEACTIVATE TONE',
+        ar:'إلغاء تفعيل النغمةً'
+    },
     downloadNow:{
         en:'Download Ranneh App Now',
         ar:'حمل تطبيق رنة الآن'
+    },
+    noData:{
+        en:'No Data Found',
+        ar:'لم يتم العثور على نغمات'
     }
 }

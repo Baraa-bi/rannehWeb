@@ -5,7 +5,7 @@ const Text  = (props) =>{
     return (
         <span 
         style={{
-            color:'black',
+            color:'#263238',
             fontFamily:props.language ==='en'?'ZainEnglish':'ZainArabic',
             ...props.style
         }}

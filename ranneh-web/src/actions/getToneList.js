@@ -8,7 +8,7 @@ import {TONE_CHANGED} from "./types";
 import _ from 'lodash';
 export const getToneList = () => {
     return (dispatch, getState) => {
-        axios.get(GET_TONE_LIST_URL,{
+        axios.get(GET_TONE_LIST_URL(getState().auth.userNumber),{
             headers:{Accept:'application/json'},
             auth:{...TONE_LIST_AUTH}
         }).then(response => {

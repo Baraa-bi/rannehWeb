@@ -1,11 +1,12 @@
 
 
-import {TONE_CHANGED,SUBSCRIBING_TONE}  from '../actions/types';
+import {TONE_CHANGED,SUBSCRIBING_TONE , UNSUBSCRIBING_TONE}  from '../actions/types';
 import _ from 'lodash';
 
 const INIT_STATE ={
     tone:{},
-    subscribingTone:false
+    subscribingTone:false,
+    unsubscribingTone:false
 };
 
 export default (state =  INIT_STATE,action)=>{
@@ -16,6 +17,9 @@ export default (state =  INIT_STATE,action)=>{
             
         case SUBSCRIBING_TONE:
             return {...state,subscribingTone:action.payload};
+            
+         case UNSUBSCRIBING_TONE:
+             return {...state, unsubscribingTone :action.payload};
             
         default:
             return state;

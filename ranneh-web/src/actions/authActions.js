@@ -20,7 +20,7 @@ export const generateUserToken = (success,error) => {
                 dispatch({type:ZAIN_LINE_TYPE,payload:response.data.Data});
                 success(response);
             }).catch(e => {
-                //error();
+                error && error();
                 console.log(e.response);
             })
     }

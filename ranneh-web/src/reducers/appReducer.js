@@ -3,7 +3,7 @@ import { APP_LANGUAGE_CHANGED } from '../actions/types';
 
 
 const INIT_STATE = {
-    language: 'ar'
+    language: 'en'
 }
 
 export default (state = INIT_STATE, action) => {
