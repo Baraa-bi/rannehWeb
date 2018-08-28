@@ -20,6 +20,7 @@ import {
     getSingleTone,
     unSubscribeTone,
     subscribeTone,
+    generateRannehToken,
     getToneList,
     getMsisdnByTokenId,
 } from '../../actions';
@@ -44,16 +45,17 @@ class MainPage extends PureComponent {
 
 
     componentDidMount() {
-        var url = new URL(window.location.href);
-        var id = url.searchParams.get("offer");
+        let url = new URL(window.location.href);
+        let id = url.searchParams.get("offer");
 
-        this.props.generateUserToken(() => {
+
+        this.props.generateRannehToken(() => {
             this.props.getMsisdnByTokenId(() => {
                 this.props.getSingleTone(id,()=>{
                     this.setState({loading:false});
                 },()=>{
                 this.setState({error:true});
-});
+                });
             });
         }, () => {
             this.props.history.push('/network-error')
@@ -272,6 +274,7 @@ export default connect(mapStateToProps, {
     generateUserToken,
     subscribeTone,
     unSubscribeTone,
+    generateRannehToken,
     clearAllData,
     userTokenChanged,
     getSingleTone,
